@@ -49,11 +49,11 @@
 </head>
 
 <body>
-    <textarea id="xOS_Document"> </textarea>
+    <textarea id="xOS_Paper"> </textarea>
     <script>
         // var useDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         tinymce.init({
-            selector: "textarea#xOS_Document",
+            selector: "textarea#xOS_Paper",
             plugins: "print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons",
             imagetools_cors_hosts: ["picsum.photos"],
             menubar: "file edit view insert format tools table help",
@@ -61,12 +61,12 @@
             toolbar_sticky: true,
             autosave_ask_before_unload: true,
             autosave_interval: "5s",
-            autosave_prefix: "xOS_Document-",
+            autosave_prefix: "xOS_Paper-",
             autosave_restore_when_empty: true,
             autosave_retention: "525600m",
             image_advtab: true,
             statusbar: false,
-            save_onsavecallback: function (e) { localStorage.setItem('xOS_Document-draft', e.save()) },
+            save_onsavecallback: function (e) { localStorage.setItem('xOS_Paper-draft', e.save()) },
             importcss_append: true,
             file_picker_callback: function (callback, value, meta) {
                 /* Provide file and text for the link dialog */
